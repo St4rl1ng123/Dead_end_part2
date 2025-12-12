@@ -84,7 +84,9 @@ func MeanSpeed(steps int, height float64, duration time.Duration) float64 {
 
 	//вычисление дистанции
 	dist := Distance(steps, height)
-	return dist / duration.Hours()
+	speed := dist / duration.Hours()
+
+	return speed
 }
 
 func Distance(steps int, height float64) float64 {
